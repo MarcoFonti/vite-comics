@@ -7,10 +7,13 @@ import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
 // ! IMPORTO APPFOOTERTOP
 import AppFooterTop from './components/AppFooterTop.vue';
+// ! IMPORTO APPFOOTERBOTTOM
+import AppFooterBottom from './components/AppFooterBottom.vue';
+
 
 export default{
   name: 'MyApp',
-  components: { AppHeader, AppMain, AppFooterTop } 
+  components: { AppHeader, AppMain, AppFooterTop, AppFooterBottom } 
 };
 </script>
 
@@ -20,8 +23,10 @@ export default{
   <AppHeader/>
   <!-- MAIN -->
   <AppMain/>
-    <!-- FOOTER-TOP -->
-    <AppFooterTop/>
+  <!-- FOOTER-TOP -->
+  <AppFooterTop/>
+  <!-- FOOTER BOOTOM -->
+  <AppFooterBottom/>
 </template>
 
 <!-- CSS -->
