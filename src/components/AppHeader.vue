@@ -108,7 +108,7 @@ header {
 ul a {
     text-decoration: none;
     color: #303437;
-    font-size: 20px;
+    text-transform: uppercase;
 }
 
 /* LINK SELEZIONATO */
