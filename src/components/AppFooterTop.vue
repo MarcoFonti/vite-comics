@@ -1,130 +1,29 @@
 <!-- JS -->
 <script>
+// IMPORTO APPFOOTERTOPCOMICS
+import AppFooterTopComics from './AppFooterTopComics.vue';
+// IMPORTO APPFOOTERTOPSHOP
+import AppFooterTopShop from './AppFooterTopShop.vue';
+// IMPORTO APPFOOTERTOPDC
+import AppFooterTopDc from './AppFooterTopDc.vue';
+// IMPORTO APPFOOTERTOPSITES
+import AppFooterTopSites from './AppFooterTopSites.vue';
+
+
 
 export default{
+    //NOME
     name: 'AppFooterTop',
-    data: () => ({
-        // DATI DC COMICS
-        arrayDcComics: 
-        [
-            {
-                text:'Characters',
-                url: '#',
-            },
-            {
-                text:'Comics',
-                url: '#',
-            },
-            {
-                text:'Movies',
-                url: '#',
-            },
-            {
-                text:'TV',
-                url: '#',
-            },
-            {
-                text:'Games',
-                url: '#',
-            },
-            {
-                text:'Videos',
-                url: '#',
-            },
-            {
-                text:'News',
-                url: '#',
-            },
-        ],
+    //COMPONENTI
+    components: { AppFooterTopComics, AppFooterTopShop, AppFooterTopDc, AppFooterTopSites, AppFooterTopSites },
+    // PROPS
+    props: {
+        AppFooterTopComics: Array,
+        AppFooterTopShop: Array,
+        AppFooterTopDc: Array,
+        AppFooterTopSites: Array
+    }
 
-        // DATI SHOP
-        arrayShop: 
-        [
-            {
-                text:'Shop DC',
-                url: '#',
-            },
-            {
-                text:'Shop DC Collectibles',
-                url: '#',
-            },
-        ],
-
-        // DATI DC 
-        arrayDc: 
-        [
-            {
-                text:'Terms Of Use',
-                url: '#',
-            },
-            {
-                text:'Privacy policy (New)',
-                url: '#',
-            },
-            {
-                text:'Ad Choices',
-                url: '#',
-            },
-            {
-                text:'Advertising',
-                url: '#',
-            },
-            {
-                text:'Jobs',
-                url: '#',
-            },
-            {
-                text:'Subscriptions',
-                url: '#',
-            },
-            {
-                text:'Talent WorkShops',
-                url: '#',
-            },
-            {
-                text:'CPSC Cerrtificates',
-                url: '#',
-            },
-            {
-                text:'Ratings',
-                url: '#',
-            },
-            {
-                text:'Shop Help',
-                url: '#',
-            },
-            {
-                text:'Contact Us',
-                url: '#',
-            },
-        ],
-
-        // DATI DC SITES
-        arraySites: 
-        [
-            {
-                text:'DC',
-                url: '#',
-            },
-            {
-                text:'MAD magazine',
-                url: '#',
-            },
-            {
-                text:'DC Kids',
-                url: '#',
-            },
-            {
-                text:'DC Universe',
-                url: '#',
-            },
-            {
-                text:'DC Power Visa',
-                url: '#',
-            },
-        ]
-    }),
-   
 };
 
 </script>
@@ -137,32 +36,17 @@ export default{
         <nav class="footer-row">
             <!-- RECIPE COMICS&SHOP -->
             <div class="recipe-comics-shop">
-                <div class="container-comics">
-                    <h4>dc comics</h4>
-                    <ul><li v-for="(dcComics, i) in arrayDcComics" :key="dcComics[i]"><a :href="dcComics.url">{{ dcComics.text }}</a></li></ul>
-                </div>
-                <div class="container-shop">
-                    <h4>shop</h4>
-                    <ul><li v-for="(shop, i) in arrayShop" :key="shop[i]"><a :href="shop.url">{{ shop.text }}</a></li></ul>
-                </div>
+                <AppFooterTopComics :Comics="AppFooterTopComics"/>
+                <AppFooterTopShop :Shops="AppFooterTopShop"/>
             </div>
-            <!-- RECIPE DC -->
-            <div class="recipe-dc">
-                <h4>dc</h4>
-                <ul><li v-for="(dc, i) in arrayDc" :key="dc[i]"><a :href="dc.url">{{ dc.text }}</a></li></ul>
-            </div>
-            <!-- RECIPE SITES -->
-            <div class="recipe-sites">
-                <h4>sites</h4>
-                <ul><li v-for="(sites, i) in arraySites" :key="sites[i]"><a :href="sites.url">{{ sites.text }}</a></li></ul>
-            </div>
+            <AppFooterTopDc :TopDc="AppFooterTopDc" />
+            <AppFooterTopSites :TopSites="AppFooterTopSites"/>
         </nav>
         <!-- RECIPE IMMAGINE DC -->
         <figcaption>
             <img src="@/assets/assets-vue-dc-comics-1/img/dc-logo-bg.png" alt="Logo DC">
         </figcaption>
     </footer>
-
 </template>
 
 <!-- CSS -->
@@ -186,29 +70,11 @@ export default{
 }
 
 /* RECIPE NAV FOOTER */
-.footer-row{
+.footer-row {
     display: flex;
     width: 1100px;
     margin: 0 auto;
     gap: 30px;
-}
-
-/* TITOLO LINK */
-h4 {
-    text-transform: uppercase;
-    color: #FFFFFF;
-}
-
-/* LISTE */
-ul {
-    list-style: none;
-    padding: 0px;
-}
-
-/* LINK */
-li a {
-    text-decoration: none;
-    color: #797979;
 }
 
 </style>

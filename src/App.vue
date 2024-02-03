@@ -1,6 +1,5 @@
 <!-- JS -->
 <script>
-
 // ! IMPORTO APPHEADER
 import AppHeader from './components/AppHeader.vue';
 // ! IMPORTO APPMAIN
@@ -9,10 +8,24 @@ import AppMain from './components/AppMain.vue';
 import AppFooterTop from './components/AppFooterTop.vue';
 // ! IMPORTO APPFOOTERBOTTOM
 import AppFooterBottom from './components/AppFooterBottom.vue';
-
+// IMPORTO FILE INDEX.JS
+import { FooterBottomIcon, FooterTopComics, FooterTopDc, FooterTopShop, FooterTopSites, HeaderNav, MainFilms, MainMenu } from './assets/date/index';
 
 export default{
+  //NOME
   name: 'MyApp',
+  // DATI
+  data: () => ({
+    FooterBottomIcon,
+    FooterTopComics,
+    FooterTopDc,
+    FooterTopShop,
+    FooterTopSites,
+    HeaderNav,
+    MainFilms,
+    MainMenu,
+  }),
+  // COMPONENTI
   components: { AppHeader, AppMain, AppFooterTop, AppFooterBottom } 
 };
 </script>
@@ -20,16 +33,21 @@ export default{
 <!-- HTML -->
 <template>
   <!-- HEADER -->
-  <AppHeader/>
+  <AppHeader :HeaderNav="HeaderNav"/>
   <!-- MAIN -->
-  <AppMain/>
+  <AppMain :AppMainFilms="MainFilms" :AppMainMenu="MainMenu"/>
   <!-- FOOTER-TOP -->
-  <AppFooterTop/>
+  <AppFooterTop :AppFooterTopComics="FooterTopComics" :AppFooterTopShop="FooterTopShop" :AppFooterTopDc="FooterTopDc" :AppFooterTopSites="FooterTopSites"/>
   <!-- FOOTER BOOTOM -->
-  <AppFooterBottom/>
+  <AppFooterBottom :AppFooterBottomIcon="FooterBottomIcon"/>
 </template>
 
 <!-- CSS -->
 <style>
+
+/* BODY */
+body {
+  height: 100vh;
+}
 
 </style>

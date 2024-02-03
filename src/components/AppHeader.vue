@@ -1,65 +1,20 @@
 <!-- JS -->
 <script>
+// IMPORTO APPHEADERNAV
+import AppHeaderNav from './AppHeaderNav.vue';
+
 export default{
     // NOME
     name: 'AppHeader',
-    // DATI
-    data: () => ({
-      arrayDate: 
-      [
-        {
-          text: 'Characters',
-          url: '#',
-          current: false,
-        },
-        {
-          text: 'Comics',
-          url: '#',
-          current: true,
-        },
-        {
-          text: 'Movies',
-          url: '#',
-          current: false,
-        },
-        {
-          text: 'TV',
-          url: '#',
-          current: false,
-        },
-        {
-          text: 'Games',
-          url: '#',
-          current: false,
-        },
-        {
-          text: 'Collectibles',
-          url: '#',
-          current: false,
-        },
-        {
-          text: 'Videos',
-          url: '#',
-          current: false,
-        },
-        {
-          text: 'Fans',
-          url: '#',
-          current: false,
-        },
-        {
-          text: 'News',
-          url: '#',
-          current: false,
-        },
-        {
-          text: 'Shop',
-          url: '#',
-          current: false,
-        },
-    ]
-  }), 
+    // COMPONENTE
+    components:{ AppHeaderNav },
+    // PROPS
+    props: {
+        HeaderNav: Array
+    }
+
 };
+
 </script>
 
 <!-- HTML -->
@@ -68,19 +23,14 @@ export default{
     <header>
         <!-- RECIPENTE LOGO -->
         <figcaption class="recipe-image">
-            <img src="@/assets/assets-vue-dc-comics-1/img/dc-logo.png" alt="">
+            <img src="@/assets/assets-vue-dc-comics-1/img/dc-logo.png" alt="Immagine Logo">
         </figcaption>
-        <!-- RECIPENTE LISTA LINK -->
-        <nav class="recipe-nav">
-            <ul>
-                <li v-for="(list, i) in arrayDate" :key="list[i]"><a :href="list.url" :class="{'active' : list.current === true}">{{ list.text }}</a></li>
-            </ul>
-        </nav>
+        <AppHeaderNav :nav="HeaderNav"/>
     </header>
 </template>
 
 <!-- CSS -->
-<style scoped>
+<style scoped lang="scss">
 
 /* HEADER */
 header {
@@ -93,27 +43,12 @@ header {
 }
 
 /* LOGO */
-.recipe-image img {
-    width: 60px;
-}
+.recipe-image{
 
-/* LISTA */
-.recipe-nav ul {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-}
-
-/* LINK */
-ul a {
-    text-decoration: none;
-    color: #303437;
-    text-transform: uppercase;
-}
-
-/* LINK SELEZIONATO */
-.active {
-    border-bottom: 2px solid #0282F9;
+    img {
+        width: 60px;
+    }
+    
 }
 
 </style>
