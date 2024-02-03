@@ -167,6 +167,32 @@ export default{
 <!-- CSS -->
 <style scoped>
 
+/* IMMAGINE JUMBOTROM */
+#recipe-jumbotrom img {
+    width: 100%;
+    height: 350px;
+}
+
+/* RECIPIENTE JUMBOTROM */
+#recipe-jumbotrom {
+    position: relative;
+    background-image: url(@/assets/assets-vue-dc-comics-1/img/jumbotron.jpg);
+    min-height: 350px;
+    background-size: cover;
+}
+
+/* RECIPENTE CURRENT SERIES */
+.reicpe-series{
+    position:absolute;
+    bottom: -5%;
+    left: 20%;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #0282F9;
+    padding: 10px 20px;
+}
+
 /* SEZIONE CONTENUTO */
 #recipe-content {
     min-height: 200px;
@@ -179,28 +205,33 @@ export default{
     flex-direction: column;
 }
 
+/* CONTENITORE FILM */
 .container-films {
     display: flex;
     flex-wrap: wrap;
     width: 1100px;
 }
 
+/* RECIPIENTE FILM */
 .recipe-films {
     width: calc(100% / 6);
     margin: 0 auto;
 }
 
+/* IMMAGINI */
 .recipe-films img {
     width: 150px;
     height: 150px;
     margin-top: 10px;
 }
 
+/* TESTO */
 .text-films {
     text-transform: uppercase;
     font-size: 12px;
 }
 
+/* BOTTONE */
 .button-films {
     background-color:#0282F9;
     border: 1px solid #1C1C1C;
@@ -233,28 +264,5 @@ export default{
     width: 40px;
 }
 
-#recipe-jumbotrom img {
-    width: 100%;
-    height: 350px;
-}
-
-#recipe-jumbotrom {
-    position: relative;
-    background-image: url(@/assets/assets-vue-dc-comics-1/img/jumbotron.jpg);
-    min-height: 350px;
-    background-size: cover;
-}
-
-.reicpe-series{
-    position:absolute;
-    bottom: -5%;
-    left: 20%;
-    text-transform: uppercase;
-    color: #ffffff;
-    font-weight: 600;
-    background-color: #0282F9;
-    padding: 10px 20px;
-
-}
 
 </style>

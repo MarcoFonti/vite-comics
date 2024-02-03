@@ -16,11 +16,11 @@ export default{
                 url:'#',
             },
             {
-                image:'footer-twitter.png',
+                image:'footer-pinterest.png',
                 url:'#',
             },
             {
-                image:'youtube.png',
+                image:'footer-youtube.png',
                 url:'#',
             },
             {
@@ -28,7 +28,17 @@ export default{
                 url:'#',
             },
         ]
-    })  
+    }),
+    
+    methods: {
+
+    // FUNZIONE URL ICONE
+    createIcon(icon){
+        const url = new URL(`../assets/assets-vue-dc-comics-1/img/${icon}`, import.meta.url);
+        console.log(url);
+        return url.href
+    },
+}
 };
 
 </script>
@@ -41,7 +51,8 @@ export default{
             <a class="sing-up" href="#">sing-up now!</a>
             <nav class="recipe-icon">
                 <a class="follow" href="#">follow us</a>
-                <ul><li v-for="(icon, i) in arrayIcon" :key="icon[i]"><a :href="icon.url"><img src="" alt=""></a></li></ul>
+                <!-- ICONE -->
+                <ul><li v-for="(icon, i) in arrayIcon" :key="icon[i]"><a :href="icon.url"><img :src="createIcon(icon.image)" alt=""></a></li></ul>
             </nav>
         </div>
     </footer>
@@ -89,6 +100,8 @@ export default{
 /* LISTE ICONE */
 ul {
     display: flex;
+    gap: 10px;
+    list-style: none;
 }
 
 /* LINK */
