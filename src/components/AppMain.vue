@@ -128,7 +128,7 @@ export default{
             const url = new URL(`../assets/assets-vue-dc-comics-1/img/${image}`, import.meta.url);
             console.log(url);
             return url.href
-        }
+        },
     }
 
 };
@@ -139,9 +139,20 @@ export default{
 <template>
     <!-- MAIN -->
     <main>
+        <section id="recipe-jumbotrom">
+            <div>
+                <div class="reicpe-series">current series</div>
+            </div>
+        </section>
         <!-- SEZIONE CONTENUTO  -->
         <section id="recipe-content">
-            <div>Content goes here</div>
+            <div class="container-films">
+                <div class="recipe-films" v-for="(films, i) in arrayDvd" :key="i">
+                    <img :src="films.thumb" alt="">
+                    <div class="text-films">{{ films.series }}</div>
+                </div>
+            </div>
+            <button class="button-films">load more</button>
         </section>
         <!-- SEZIONE CONTENUTO COMICS -->
         <section id="recipe-content-comics">
@@ -158,9 +169,45 @@ export default{
 
 /* SEZIONE CONTENUTO */
 #recipe-content {
-    min-height: 100px;
+    min-height: 200px;
     background-color: #1C1C1C;
     color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0px;
+    flex-direction: column;
+}
+
+.container-films {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1100px;
+}
+
+.recipe-films {
+    width: calc(100% / 6);
+    margin: 0 auto;
+}
+
+.recipe-films img {
+    width: 150px;
+    height: 150px;
+    margin-top: 10px;
+}
+
+.text-films {
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.button-films {
+    background-color:#0282F9;
+    border: 1px solid #1C1C1C;
+    color: #ffffff;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    margin-top: 60px;
 }
 
 /* SEZIONE CONTENUTO COMICS */
@@ -184,6 +231,30 @@ export default{
 /* IMMAGINI */
 .recipe-comics img {
     width: 40px;
+}
+
+#recipe-jumbotrom img {
+    width: 100%;
+    height: 350px;
+}
+
+#recipe-jumbotrom {
+    position: relative;
+    background-image: url(@/assets/assets-vue-dc-comics-1/img/jumbotron.jpg);
+    min-height: 350px;
+    background-size: cover;
+}
+
+.reicpe-series{
+    position:absolute;
+    bottom: -5%;
+    left: 20%;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #0282F9;
+    padding: 10px 20px;
+
 }
 
 </style>
