@@ -1,47 +1,48 @@
-// DATI FOOTER TOP DC
+
+/* ESPORTAZIONE DATI FOOTER TOP DC */
 export default [
     {
-        text:'Terms Of Use',
+        text: 'Terms Of Use',
         url: '#',
     },
     {
-        text:'Privacy policy (New)',
+        text: 'Privacy policy (New)',
         url: '#',
     },
     {
-        text:'Ad Choices',
+        text: 'Ad Choices',
         url: '#',
     },
     {
-        text:'Advertising',
+        text: 'Advertising',
         url: '#',
     },
     {
-        text:'Jobs',
+        text: 'Jobs',
         url: '#',
     },
     {
-        text:'Subscriptions',
+        text: 'Subscriptions',
         url: '#',
     },
     {
-        text:'Talent WorkShops',
+        text: 'Talent WorkShops',
         url: '#',
     },
     {
-        text:'CPSC Cerrtificates',
+        text: 'CPSC Cerrtificates',
         url: '#',
     },
     {
-        text:'Ratings',
+        text: 'Ratings',
         url: '#',
     },
     {
-        text:'Shop Help',
+        text: 'Shop Help',
         url: '#',
     },
     {
-        text:'Contact Us',
+        text: 'Contact Us',
         url: '#',
     },
 ]

@@ -1,14 +1,24 @@
 <!-- JS -->
 <script>
-// IMPORTO APPHEADERNAV
+
+
+/* IMPORTO APPHEADERNAV */
 import AppHeaderNav from './AppHeaderNav.vue';
 
-export default{
-    // NOME
+
+/* ESPORTAZIONE */
+export default {
+
+
+    /* NOME PAGINA */
     name: 'AppHeader',
-    // COMPONENTE
-    components:{ AppHeaderNav },
-    // PROPS
+
+
+    /* COMPONENTE */
+    components: { AppHeaderNav },
+
+
+    /* PROPS CHE RICEVE UN ARRAY (DA APP) */
     props: {
         HeaderNav: Array
     }
@@ -19,19 +29,22 @@ export default{
 
 <!-- HTML -->
 <template>
+
     <!-- HEADER -->
     <header>
         <!-- RECIPENTE LOGO -->
         <figcaption class="recipe-image">
             <img src="@/assets/assets-vue-dc-comics-1/img/dc-logo.png" alt="Immagine Logo">
         </figcaption>
-        <AppHeaderNav :nav="HeaderNav"/>
+        <!-- ALLA PROPS NAV PASSO UN ARRAY -->
+        <AppHeaderNav :nav="HeaderNav" />
     </header>
+
 </template>
+
 
 <!-- CSS -->
 <style scoped lang="scss">
-
 /* HEADER */
 header {
     display: flex;
@@ -43,12 +56,11 @@ header {
 }
 
 /* LOGO */
-.recipe-image{
+.recipe-image {
 
     img {
         width: 60px;
     }
-    
-}
 
+}
 </style>

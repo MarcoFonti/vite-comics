@@ -1,31 +1,32 @@
-// DATI FOOTER TOP COMICS
+
+/* ESPORTAZIONE DATI FOOTER TOP COMICS */
 export default [
     {
-        text:'Characters',
+        text: 'Characters',
         url: '#',
     },
     {
-        text:'Comics',
+        text: 'Comics',
         url: '#',
     },
     {
-        text:'Movies',
+        text: 'Movies',
         url: '#',
     },
     {
-        text:'TV',
+        text: 'TV',
         url: '#',
     },
     {
-        text:'Games',
+        text: 'Games',
         url: '#',
     },
     {
-        text:'Videos',
+        text: 'Videos',
         url: '#',
     },
     {
-        text:'News',
+        text: 'News',
         url: '#',
     },
 ]

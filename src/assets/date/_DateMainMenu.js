@@ -1,4 +1,5 @@
-// DATI MAIN MENU
+
+/* ESPORTAZIONE DATI MAIN MENU */
 export default [
     {
         image: 'buy-comics-digital-comics.png',

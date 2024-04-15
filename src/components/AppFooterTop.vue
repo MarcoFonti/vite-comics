@@ -1,22 +1,30 @@
 <!-- JS -->
 <script>
-// IMPORTO APPFOOTERTOPCOMICS
+
+
+/* IMPORTO APPFOOTERTOPCOMICS */
 import AppFooterTopComics from './AppFooterTopComics.vue';
-// IMPORTO APPFOOTERTOPSHOP
+/* IMPORTO APPFOOTERTOPSHOP */
 import AppFooterTopShop from './AppFooterTopShop.vue';
-// IMPORTO APPFOOTERTOPDC
+/* IMPORTO APPFOOTERTOPDC */
 import AppFooterTopDc from './AppFooterTopDc.vue';
-// IMPORTO APPFOOTERTOPSITES
+/* IMPORTO APPFOOTERTOPSITES */
 import AppFooterTopSites from './AppFooterTopSites.vue';
 
 
+/* ESPORTAZIONE */
+export default {
 
-export default{
-    //NOME
+
+    /* NOME PAGINA */
     name: 'AppFooterTop',
-    //COMPONENTI
+
+
+    /* COMPONENTI */
     components: { AppFooterTopComics, AppFooterTopShop, AppFooterTopDc, AppFooterTopSites, AppFooterTopSites },
-    // PROPS
+
+
+    /* PROPS CHE RICEVE QUATTRO ARRAY (DA APP) */
     props: {
         AppFooterTopComics: Array,
         AppFooterTopShop: Array,
@@ -28,30 +36,37 @@ export default{
 
 </script>
 
+
 <!-- HTML -->
 <template>
+
     <!-- FOOTER -->
     <footer id="recipe-footer-top">
         <!-- RECIPE NAV FOOTER -->
         <nav class="footer-row">
             <!-- RECIPE COMICS&SHOP -->
             <div class="recipe-comics-shop">
-                <AppFooterTopComics :Comics="AppFooterTopComics"/>
-                <AppFooterTopShop :Shops="AppFooterTopShop"/>
+                <!-- ALLA PROPS COMICS PASSO UN ARRAY -->
+                <AppFooterTopComics :Comics="AppFooterTopComics" />
+                <!-- ALLA PROPS SHOPS PASSO UN ARRAY -->
+                <AppFooterTopShop :Shops="AppFooterTopShop" />
             </div>
+            <!-- ALLA PROPS TOPDC PASSO UN ARRAY -->
             <AppFooterTopDc :TopDc="AppFooterTopDc" />
-            <AppFooterTopSites :TopSites="AppFooterTopSites"/>
+            <!-- ALLA PROPS TOPSITES PASSO UN ARRAY -->
+            <AppFooterTopSites :TopSites="AppFooterTopSites" />
         </nav>
         <!-- RECIPE IMMAGINE DC -->
         <figcaption>
             <img src="@/assets/assets-vue-dc-comics-1/img/dc-logo-bg.png" alt="Logo DC">
         </figcaption>
     </footer>
+
 </template>
+
 
 <!-- CSS -->
 <style scoped>
-
 /* RECIPE FOOTER */
 #recipe-footer-top {
     background-image: url(@/assets/assets-vue-dc-comics-1/img/footer-bg.jpg);
@@ -76,5 +91,4 @@ export default{
     margin: 0 auto;
     gap: 30px;
 }
-
 </style>

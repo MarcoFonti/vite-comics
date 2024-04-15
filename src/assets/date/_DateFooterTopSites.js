@@ -1,23 +1,24 @@
-// DATI FOOTER TOP SITES
+
+/* ESPORTAZIONE DATI FOOTER TOP SITES */
 export default [
     {
-        text:'DC',
+        text: 'DC',
         url: '#',
     },
     {
-        text:'MAD magazine',
+        text: 'MAD magazine',
         url: '#',
     },
     {
-        text:'DC Kids',
+        text: 'DC Kids',
         url: '#',
     },
     {
-        text:'DC Universe',
+        text: 'DC Universe',
         url: '#',
     },
     {
-        text:'DC Power Visa',
+        text: 'DC Power Visa',
         url: '#',
     },
 ]

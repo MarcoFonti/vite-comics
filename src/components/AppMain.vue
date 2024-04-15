@@ -1,16 +1,26 @@
 <!-- JS -->
 <script>
-// IMPORTO APPMAINFILMS
+
+
+/* IMPORTO APPMAINFILMS */
 import AppMainFilms from './AppMainFilms.vue';
-// IMPORTO APPMAINMENU
+/* IMPORTO APPMAINMENU */
 import AppMainMenu from './AppMainMenu.vue';
 
-export default{
-    //NOME
+
+/* ESPORTAZIONE */
+export default {
+
+
+    /* NOME PAGINA */
     name: 'AppMain',
-    //COMPONENTI
+
+
+    /* COMPONENTI */
     components: { AppMainFilms, AppMainMenu },
-    //PROPS
+
+
+    /* PROPS CHE RICEVE DUE ARRAY (DA APP) */
     props: {
         AppMainFilms: Array,
         AppMainMenu: Array
@@ -22,6 +32,7 @@ export default{
 
 <!-- HTML -->
 <template>
+
     <!-- MAIN -->
     <main>
         <section id="recipe-jumbotrom">
@@ -29,23 +40,26 @@ export default{
                 <div class="reicpe-series">current series</div>
             </div>
         </section>
-        <AppMainFilms :Films="AppMainFilms"/>
-        <AppMainMenu :Menu="AppMainMenu"/>
+        <!-- ALLA PROPS FILMS PASSO UN ARRAY -->
+        <AppMainFilms :Films="AppMainFilms" />
+        <!-- ALLA PROPS MENU PASSO UN ARRAY -->
+        <AppMainMenu :Menu="AppMainMenu" />
     </main>
+
 </template>
+
 
 <!-- CSS -->
 <style scoped lang="scss">
-
 /* IMMAGINE JUMBOTROM */
 #recipe-jumbotrom {
-    
+
     img {
         width: 100%;
         height: 350px;
     }
 
-} 
+}
 
 /* RECIPIENTE JUMBOTROM */
 #recipe-jumbotrom {
@@ -57,7 +71,7 @@ export default{
 
 /* RECIPENTE CURRENT SERIES */
 .reicpe-series {
-    position:absolute;
+    position: absolute;
     bottom: -5%;
     left: 20%;
     text-transform: uppercase;
@@ -66,5 +80,4 @@ export default{
     background-color: #0282F9;
     padding: 10px 20px;
 }
-
 </style>

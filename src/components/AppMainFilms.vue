@@ -1,22 +1,31 @@
 <!-- JS -->
 <script>
-export default{
-    //NOME
+
+
+/* ESPORTAZIONE */
+export default {
+
+
+    /* NOME PAGINA */
     name: 'AppMainFilms',
-    //PROPS
+
+
+    /* PROPS CHE RICEVE UN ARRAY (DA APPMAIN) */
     props: {
         Films: Array
     }
-    
+
 };
 
 </script>
 
 <!-- HTML -->
 <template>
+
     <!-- SEZIONE CONTENUTO  -->
     <section id="recipe-content">
         <div class="container-films">
+            <!-- CICLO SULL'ARRAY E RECUPERO OGNI SINGOLO ELEMENTO E INDICE -->
             <div class="recipe-films" v-for="(films, i) in Films" :key="i">
                 <img :src="films.thumb" alt="">
                 <div class="text-films">{{ films.series }}</div>
@@ -24,11 +33,12 @@ export default{
         </div>
         <button class="button-films">load more</button>
     </section>
+
 </template>
+
 
 <!-- CSS -->
 <style scoped lang="scss">
-
 /* SEZIONE CONTENUTO */
 #recipe-content {
     min-height: 200px;
@@ -55,14 +65,14 @@ export default{
 }
 
 /* IMMAGINI */
-.recipe-films{ 
-    
+.recipe-films {
+
     img {
         width: 150px;
         height: 150px;
         margin-top: 10px;
     }
-    
+
 }
 
 /* TESTO */
@@ -73,12 +83,11 @@ export default{
 
 /* BOTTONE */
 .button-films {
-    background-color:#0282F9;
+    background-color: #0282F9;
     border: 1px solid #1C1C1C;
     color: #ffffff;
     padding: 10px 40px;
     text-transform: uppercase;
     margin-top: 60px;
 }
-
 </style>
