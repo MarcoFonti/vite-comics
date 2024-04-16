@@ -61,7 +61,6 @@ export default {
 
 <!-- CSS -->
 <style scoped lang="scss">
-
 /* SEZIONE CONTENUTO COMICS */
 #recipe-content-comics {
     background-color: #0282F9;
@@ -87,5 +86,4 @@ export default {
         width: 40px;
     }
 }
-
 </style>
